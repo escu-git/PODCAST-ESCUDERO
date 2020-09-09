@@ -1,0 +1,36 @@
+//Fonts
+$text-font-family: 'IBM Plex Mono', monospace;
+$title-font-family:'IBM Plex Sans', sans-serif;
+
+//Colors
+$dark-blue: #0000EC;
+$soft-blue: #0000FF;
+$button-blue: #0000FE;
+$gradient: solid #0000FF, solid #0000EC; //Funciona así?
+$white: #FFFFFF;
+$lightgreen: #00F3BB;
+$button-green: #00F0B8;
+$black:#000000;
+
+//Font size
+$text-size: 1rem; //16px
+$button-text-size: 1.125rem; // 18px
+$title-text-size: 3rem; // 48px
+
+//font size for mobile
+$mob-text-size: 1px;
+$mob-button-size: 1px;
+$mot-title-size:1px;
+//Font weight
+$bold-weight: 500;
+$normal-weight: 200;
+
+//width and height
+$web-width: 1440px;
+$button-width: 226px;
+$button-height: 56px;
+
+//mediaqueries width:
+$largeMobile: 426px;
+$tablet: 769px; 
+$notebook:1023px;

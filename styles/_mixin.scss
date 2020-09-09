@@ -1,0 +1,9 @@
+@mixin gradient-buttons {
+    background-color: $lightgreen;
+    color: $black;
+    font-size: $button-text-size;
+    font-weight: $bold-weight;
+    text-transform:uppercase;
+    text-align:center;
+    transition: 0.4s ease-in;
+}

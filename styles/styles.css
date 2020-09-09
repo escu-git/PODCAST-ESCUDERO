@@ -1,0 +1,114 @@
+*
+::before
+::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.clearfix::after {
+  content: "";
+  visibility: hidden;
+  display: block;
+  font-size: 0px;
+  clear: both;
+  height: 0px;
+}
+
+h2 {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: 3rem;
+}
+
+[class$="-button"] {
+  background-color: #00F3BB;
+  color: #000000;
+  font-size: 1.125rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-transition: 0.4s ease-in;
+  transition: 0.4s ease-in;
+}
+
+[class$="-button"]:hover {
+  background-image: -webkit-gradient(linear, right top, left top, from(#0000FE), to(#00F0B8));
+  background-image: linear-gradient(to left, #0000FE, #00F0B8);
+  color: #FFFFFF;
+  -webkit-transform: translatex(5px);
+          transform: translatex(5px);
+}
+
+a {
+  all: unset;
+}
+
+a:visited {
+  color: green;
+}
+
+a:hover {
+  color: rgba(6, 10, 36, 0.56);
+  cursor: pointer;
+}
+
+.introContainer {
+  width: 100px;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 44px;
+  width: 100%;
+}
+
+headernav {
+  color: blue;
+}
+
+headernav ul {
+  height: 0;
+}
+
+header .hamMenu input {
+  opacity: 0;
+  visibility: 0;
+}
+
+header .hamMenu input:checked ~ ul {
+  display: relative;
+  height: 240px;
+  background: green;
+}
+
+header label {
+  text-shadow: 12px, solid green;
+}
+
+@media screen and (min-width: 1000px) {
+  header {
+    height: 80px;
+  }
+  headerimg {
+    width: 36px;
+    height: 36px;
+    margin: 22px 0 0 100px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

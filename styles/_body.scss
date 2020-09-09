@@ -1,0 +1,54 @@
+*
+::before
+::after {
+    box-sizing: border-box;
+    text-decoration:none;
+}
+
+html {
+    font-size:16px;
+}
+body {
+    font-size: $text-size;
+    font-family: $title-font-family;
+}
+
+.clearfix::after {
+    content:"";
+    visibility:hidden;
+    display:block;
+    font-size:0px;
+    clear:both;
+    height:0px;
+}
+
+h2 {
+    font-family: $title-font-family;
+    font-size: $title-text-size;
+}
+
+[class$="-button"] {
+    @include gradient-buttons;
+
+    &:hover {
+        background-image: linear-gradient(to left, $button-blue, $button-green);
+        color: $white;
+        transform: translatex(5px);
+    }
+}
+
+a {
+    all:unset;
+
+    &:visited {
+        color:green;
+    }
+    &:hover {
+        color: rgba(6, 10, 36, 0.56);
+        cursor: pointer;
+    }
+}
+
+.introContainer {
+    width:100px ;
+}

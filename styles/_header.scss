@@ -1,0 +1,30 @@
+header {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    height:44px;
+    width:100%;
+ 
+    &nav {
+        color:blue;
+
+        & ul {
+            height:0;
+        }
+    }
+    //hamburger menú
+    & .hamMenu {
+        input {
+            opacity:0;
+            visibility:0;
+            &:checked ~ ul{
+                display: relative;
+                height: 240px;
+                background:green;
+            }
+            }
+        }
+    & label {
+        text-shadow: 12px, solid green;
+    }
+}
