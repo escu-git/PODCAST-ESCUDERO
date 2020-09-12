@@ -1,4 +1,4 @@
-@media screen and (min-width:1000px) {
+@media screen and (min-width:769px) {
     
     header {
         height:80px;
@@ -6,10 +6,11 @@
             width:36px;
             height:36px;
             margin:22px 0 0 100px;
-            
-
-
-
+        }
+    }
+    .introContainer {
+        & p:after {
+            content:"El portal de podcasts que explora el mundo de la programación y la tecnología. Nuevos episodios, todos los jueves cada 15 días."
         }
     }
 }

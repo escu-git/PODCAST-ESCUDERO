@@ -3,6 +3,10 @@ $text-font-family: 'IBM Plex Mono', monospace;
 $title-font-family:'IBM Plex Sans', sans-serif;
 
 //Colors
+    //MOBILE
+    $dotMobile: #060A24;
+    //DESKTOP
+    $dotDesktop: #0000EC;
 $dark-blue: #0000EC;
 $soft-blue: #0000FF;
 $button-blue: #0000FE;
@@ -13,6 +17,9 @@ $button-green: #00F0B8;
 $black:#000000;
 
 //Font size
+    //MOBILE
+    
+    //DESKTOP
 $text-size: 1rem; //16px
 $button-text-size: 1.125rem; // 18px
 $title-text-size: 3rem; // 48px

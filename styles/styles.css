@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *
 ::before
 ::after {
@@ -13,6 +14,7 @@ html {
 body {
   font-size: 1rem;
   font-family: "IBM Plex Sans", sans-serif;
+  margin: 2px;
 }
 
 .clearfix::after {
@@ -29,25 +31,6 @@ h2 {
   font-size: 3rem;
 }
 
-[class$="-button"] {
-  background-color: #00F3BB;
-  color: #000000;
-  font-size: 1.125rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  text-align: center;
-  -webkit-transition: 0.4s ease-in;
-  transition: 0.4s ease-in;
-}
-
-[class$="-button"]:hover {
-  background-image: -webkit-gradient(linear, right top, left top, from(#0000FE), to(#00F0B8));
-  background-image: linear-gradient(to left, #0000FE, #00F0B8);
-  color: #FFFFFF;
-  -webkit-transform: translatex(5px);
-          transform: translatex(5px);
-}
-
 a {
   all: unset;
 }
@@ -61,47 +44,119 @@ a:hover {
   cursor: pointer;
 }
 
-.introContainer {
-  width: 100px;
-}
-
 header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 44px;
+  display: block;
   width: 100%;
+  height: 44px;
+  margin-bottom: 0.5%;
+  margin: 0px;
 }
 
-headernav {
+header .topLogo {
+  float: left;
+  margin: 10px 0px 10px 16px;
+}
+
+header .topMenu {
+  float: right;
+  margin: 5.6 0.2 0.3 0;
+}
+
+header .hamMenu .ulContainer {
   color: red;
+  height: 0px;
+  overflow: hidden;
 }
 
-headernav ul {
-  height: 0;
+header .hamMenu label span {
+  display: inline-block;
+  width: 18px;
+  height: 2px;
+  background-color: black;
 }
 
-header .hamMenu input {
-  opacity: 0;
-  visibility: 0;
+header .hamMenu #menu {
+  display: none;
 }
 
-header .hamMenu input:checked ~ ul {
-  display: relative;
-  height: 240px;
-  background: green;
+header .hamMenu #menu:checked ~ .ulContainer {
+  height: 100px;
+  overflow: visible;
 }
 
-header label {
-  text-shadow: 12px, solid green;
+.introContainer {
+  margin: 0 0 0.4% 0;
+  padding-left: 5%;
 }
 
-@media screen and (min-width: 1000px) {
+.introContainer h1 {
+  margin: 5% 0 0.3% 0;
+  width: 66.3%;
+  height: calc(85px + 42px);
+  font-size: 2.25rem;
+}
+
+.introContainer span:nth-child(1) {
+  text-decoration: line-through;
+}
+
+.introContainer span:nth-child(2) {
+  color: #060A24;
+}
+
+.introContainer p {
+  height: 1.2%;
+  width: 90%;
+}
+
+.introContainer p:after {
+  content: "Un podcast que explora el mundo de la programación. Nuevos episodios, todos los jueves cada 15 días.";
+  margin-bottom: 0.7%;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.introContainer [class$="-button"] {
+  background-color: #00F3BB;
+  font-family: "IBM Plex Mono", monospace;
+  color: #060A24;
+  font-size: 1.125rem;
+  font-weight: 500;
+  font-weight: bolder;
+  border-style: none;
+  width: 90%;
+  height: 48px;
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-transition: 0.4s ease-in;
+  transition: 0.4s ease-in;
+}
+
+.introContainer [class$="-button"]:hover {
+  background-image: -webkit-gradient(linear, right top, left top, from(#0000FE), to(#00F0B8));
+  background-image: linear-gradient(to left, #0000FE, #00F0B8);
+  color: #FFFFFF;
+  -webkit-transform: translatex(5px);
+          transform: translatex(5px);
+}
+
+.episodesContainer {
+  position: relative;
+  padding-left: 5%;
+  width: 100%;
+  height: 22.1%;
+  background-color: pink;
+}
+
+.episodesContainer:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top: 100px solid blue;
+  border-left: 200px solid white;
+}
+
+@media screen and (min-width: 769px) {
   header {
     height: 80px;
   }
@@ -109,6 +164,9 @@ header label {
     width: 36px;
     height: 36px;
     margin: 22px 0 0 100px;
+  }
+  .introContainer p:after {
+    content: "El portal de podcasts que explora el mundo de la programación y la tecnología. Nuevos episodios, todos los jueves cada 15 días.";
   }
 }
 /*# sourceMappingURL=styles.css.map */

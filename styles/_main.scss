@@ -1,0 +1,49 @@
+.introContainer {
+    margin: 0 0 0.4% 0;
+    padding-left:5%;
+    & h1 {
+        margin:5% 0 0.3% 0;
+        width:66.3%;
+        height:calc(85px + 42px);
+        font-size:2.25rem;
+    }
+    & span:nth-child(1) {
+        text-decoration:line-through;
+    }
+    & span:nth-child(2) {
+        color:$dotMobile;
+    }
+    & p {
+        height: 1.2%;
+        width: 90%;
+    }
+    & p:after {
+        
+        content:"Un podcast que explora el mundo de la programación. Nuevos episodios, todos los jueves cada 15 días.";
+        margin-bottom: 0.7%;
+        font-family: $text-font-family;
+    }
+    [class$="-button"] {
+        @include gradient-button-mobile;
+        &:hover {
+            background-image: linear-gradient(to left, $button-blue, $button-green);
+            color: $white;
+            transform: translatex(5px);
+        }
+    }
+}
+.episodesContainer {
+    position:relative;    
+    padding-left:5%;
+    width:100%;
+    height:22.1%;
+    background-color: pink; 
+}
+.episodesContainer:before {
+    content:"";
+    position:absolute;
+    top:0; left: 0;
+    border-top: 100px solid blue;
+    border-left: 200px solid white;
+
+}
