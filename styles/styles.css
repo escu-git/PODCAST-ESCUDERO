@@ -110,36 +110,33 @@ header .hamMenu #menu:checked ~ .ulContainer {
   overflow: visible;
 }
 
-.introContainer {
-  margin: 0 0 0.4% 5%;
-}
-
-.introContainer h1 {
-  margin: 5% 0 0.3% 0;
-  width: 66.3%;
-  min-width: 200px;
-  height: calc(85px + 42px);
-  font-size: 2.25rem;
-}
-
-.introContainer span:nth-child(1) {
-  text-decoration: line-through;
-}
-
-.introContainer span:nth-child(2) {
-  color: #060A24;
-}
-
-.introContainer p {
-  height: 1.2%;
-  width: 90%;
-  margin: 16px 0 36px 0;
-}
-
-.introContainer p:after {
-  content: "Un podcast que explora el mundo de la programación. Nuevos episodios, todos los jueves cada 15 días.";
-  margin-bottom: 0.7%;
-  font-family: "IBM Plex Mono", monospace;
+@media screen and (max-width: 768px) {
+  .introContainer {
+    margin: 0 0 0.4% 5%;
+  }
+  .introContainer h1 {
+    margin: 5% 0 0.3% 0;
+    width: 66.3%;
+    min-width: 200px;
+    height: calc(85px + 42px);
+    font-size: 2.25rem;
+  }
+  .introContainer span:nth-child(1) {
+    text-decoration: line-through;
+  }
+  .introContainer span:nth-child(2) {
+    color: #060A24;
+  }
+  .introContainer p {
+    height: 1.2%;
+    width: 90%;
+    margin: 16px 0 36px 0;
+  }
+  .introContainer p:after {
+    content: "Un podcast que explora el mundo de la programación. Nuevos episodios, todos los jueves cada 15 días.";
+    margin-bottom: 0.7%;
+    font-family: "IBM Plex Mono", monospace;
+  }
 }
 
 .episodesContainer {
@@ -188,7 +185,6 @@ header .hamMenu #menu:checked ~ .ulContainer {
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;
           flex-grow: 2;
-  background-color: red;
   width: calc(100% + 5%);
   margin: 0 0 0 -5%;
 }
@@ -307,15 +303,224 @@ footer i {
 
 @media screen and (min-width: 769px) {
   header {
+    display: block;
     height: 80px;
   }
   headerimg {
+    position: relative;
     width: 36px;
+    float: left;
     height: 36px;
     margin: 22px 0 0 100px;
   }
+  header nav {
+    display: block;
+    float: right;
+    padding: 26px 100px 26px 0;
+    height: 80px;
+    text-align: right;
+  }
+  header nav ul {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+  }
+  header nav ul:last-child {
+    margin-right: 0;
+  }
+  header nav li {
+    font-family: 'IBM Plex Mono', monospace;
+    text-transform: uppercase;
+    list-style: none;
+    font-size: 16px;
+    display: inline;
+    margin: 26px 24px;
+  }
+  header nav li:hover {
+    color: #00F3BB;
+    text-decoration: line-through;
+    font-weight: 500;
+  }
+  header nav li:active {
+    color: rgba(6, 10, 35, 0.56);
+  }
+  .introContainer {
+    display: block;
+    padding-left: 100px;
+    text-align: left;
+  }
   .introContainer p:after {
     content: "El portal de podcasts que explora el mundo de la programación y la tecnología. Nuevos episodios, todos los jueves cada 15 días.";
+  }
+  .introContainer h1 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 64px;
+    margin: 120px 518px 0  0;
+  }
+  .introContainer span:nth-child(1) {
+    text-decoration: line-through;
+  }
+  .introContainer span:nth-child(2) {
+    color: #0000EC;
+  }
+  .introContainer p {
+    width: 628px;
+    height: 48px;
+    line-height: 24px;
+    margin: 0 0 72px 0;
+  }
+  .introContainer .conoce-button {
+    width: 226px;
+    height: 56px;
+    margin-top: 56px 0 5px 0;
+  }
+  .episodesContainer {
+    width: 1440px;
+    height: 1042.6px;
+    margin: 0 auto;
+    position: relative;
+    font-family: 'IBM Plex Sans', sans-serif;
+    padding: 50px 0 0 0;
+    background-color: #0000EC;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(#0000FF, solid), color-stop(#0000EC, solid));
+    background-image: linear-gradient(solid #0000FF, solid #0000EC);
+  }
+  .episodesContainer:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-right: 1440px solid #0000EC;
+    border-top: 120px solid white;
+  }
+  .episodesContainer:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom: 100px solid white;
+    border-left: 1440px solid #0000EC;
+  }
+  .episodesContainer h2 {
+    display: block;
+    top: 50px;
+    color: #FFFFFF;
+    font-size: 48px;
+    margin: 100px 0px;
+    padding-left: 100px;
+  }
+  .episodesContainer .flexContainer {
+    margin: 0px auto;
+    padding: 0 100px 0 100px;
+  }
+  .womenCodingContainer {
+    display: block;
+    margin: 0 auto;
+    background-color: white;
+  }
+  .womenCodingContainer .phoneContainer {
+    position: relative;
+    display: block;
+    float: left;
+    left: 100px;
+    bottom: 140px;
+    margin: 0px;
+    padding: 0;
+  }
+  .womenCodingContainer .phoneContainer img {
+    width: 457.6px;
+    height: 660px;
+  }
+  .womenCodingContainer .phoneContainer .phoneTextContainer {
+    position: relative;
+    display: block;
+    float: right;
+    right: 300px;
+    width: 464px;
+    height: 204px;
+    top: 60px;
+    text-align: left;
+  }
+  .womenCodingContainer .phoneContainer .phoneTextContainer h2 {
+    width: 399px;
+    height: 62px;
+    color: black;
+    margin: 0px;
+    padding-left: 0px;
+    margin-bottom: 24px;
+  }
+  .womenCodingContainer .phoneContainer .phoneTextContainer p {
+    font-family: 'IBM Plex Mono', monospace;
+    color: #060A24;
+    padding-top: 0px;
+    margin-top: 0px;
+  }
+  .invitadosContainer .imgGrid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (3, 1fr)[auto-fill];
+        grid-template-columns: repeat(auto-fill 3, 1fr);
+    -ms-grid-rows: (2, 1fr)[auto-fill];
+        grid-template-rows: repeat(auto-fill 2, 1fr);
+    grid-auto-flow: column;
+  }
+  .invitadosContainer .imgGrid img {
+    width: 100%;
+  }
+  .temasContainer {
+    background-color: white;
+    text-align: center;
+  }
+  .temasContainer h2 {
+    color: black;
+    margin: 100px 0 69px 0;
+    font-size: 48px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    text-align: left;
+  }
+  .temasContainer h2 div {
+    display: inline-block;
+    text-align: center;
+  }
+  .temasContainer h2 div .icons {
+    width: 260px;
+    height: 140px;
+    padding: 0 78px;
+  }
+  .novedadesContainer {
+    position: relative;
+    display: block;
+    height: 518px;
+    margin: 0 auto;
+    padding-top: 100px;
+    background-color: #0000EC;
+    text-align: center;
+    padding: 213px 0 0 0;
+  }
+  .novedadesContainer:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 150px solid white;
+    border-right: 1440px solid #0000EC;
+  }
+  .novedadesContainer h2 {
+    width: 692px;
+    height: 62px;
+    color: white;
+    margin: 0 auto;
+  }
+  .novedadesContainer .episodes-button {
+    width: 345px;
+    height: 56px;
+  }
+  .footer h6 {
+    float: left;
+  }
+  .footer i {
+    float: right;
   }
 }
 /*# sourceMappingURL=styles.css.map */
