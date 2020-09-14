@@ -1,11 +1,10 @@
 .introContainer {
-    margin: 0 0 0.4% 0;
-    padding-left:5%;
+    margin: 0 0 0.4% 5%;
     & h1 {
         margin:5% 0 0.3% 0;
-        width:66.3%;
+        width:66.3%; min-width: 200px;
         height:calc(85px + 42px);
-        font-size:2.25rem;
+        font-size:2.25rem; 
     }
     & span:nth-child(1) {
         text-decoration:line-through;
@@ -16,34 +15,126 @@
     & p {
         height: 1.2%;
         width: 90%;
+        margin: 16px 0 36px 0;
     }
-    & p:after {
-        
+    & p:after {  
         content:"Un podcast que explora el mundo de la programación. Nuevos episodios, todos los jueves cada 15 días.";
         margin-bottom: 0.7%;
         font-family: $text-font-family;
     }
-    [class$="-button"] {
-        @include gradient-button-mobile;
-        &:hover {
-            background-image: linear-gradient(to left, $button-blue, $button-green);
-            color: $white;
-            transform: translatex(5px);
-        }
-    }
 }
 .episodesContainer {
     position:relative;    
-    padding-left:5%;
-    width:100%;
-    height:22.1%;
-    background-color: pink; 
+    width:calc(100vw - 5%);
+    height: 22.1%;
+    background-color: blue;
+    padding: 40px 0 0 5%;
+    &:before {
+        content:"";
+        position: absolute;
+        top:0; left: 0;
+        border-top: 8vh solid white;
+        border-right: 100vw solid blue;
+    }
+    &:after {
+        content:"";
+        position: absolute;
+        bottom:0; left:0;
+        border-bottom: 10vh solid white;
+        border-left: 100vw solid blue;
+    }
+    & h2 {
+        color:$white;
+        margin: 16px 0 21px 0;
+    }
+    & .flexContainer {
+        display:flex;
+        flex-wrap:wrap;
+        justify-content: space-between;
+        align-items: center;
+        flex-grow: 2;
+        background-color: red;
+        width: calc(100% + 5%);
+        margin:0 0 0 -5%;
+        & iframe {
+            width: 93.1%;
+            height:225px;
+            max-width:298px;
+        }
+    }
 }
-.episodesContainer:before {
-    content:"";
-    position:absolute;
-    top:0; left: 0;
-    border-top: 100px solid blue;
-    border-left: 200px solid white;
+// VER DESPUÉS TEMA FLEXBOX
+.womenCodingContainer {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    .phoneContainer{
+        position:relative;
+        width:100%;
+        padding: 0 10% 0 10%;
+        img {
+            position:static;
+            width:100%;
+            bottom:10px;
+        }
+    }
+}
+//PHONE AND TEXT -
+.invitadosContainer {
+    width: 100%;
+    & .imgGrid {
+        display:grid;
+        grid-template-columns: repeat(auto-fill 3, 1fr);
+        grid-template-rows: repeat(auto-fill 2,1fr);
+        grid-auto-flow:row;
+        & img {
+            width:100%;
+        }
+    }
+}
 
+.iconosContainer {
+    display:grid;
+    grid-template-columns: 200px;
+    justify-content:center;
+
+    [class~="icon"] {
+        justify-content:center;
+
+    }
+}
+.novedadesContainer {
+    background-color:blue;
+    position:relative;
+    width:100%;
+    height:341px;
+    padding-top: 5vh;
+        &:before {
+            content:"";
+            position: absolute;
+            top:0; left:0;
+            border-top: 7vh solid white;
+            border-right: 100vw solid blue;
+        }
+    & h2 {
+        margin-top:15px;
+        color:white;
+    & button {
+        margin:auto;
+    }
+    }
+}
+footer {
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 50%);
+    height: 121px;
+    & h6 {
+        grid-column:1 / 6;
+        grid-row: 1 / 2;
+        margin:auto;
+    }
+    i {
+        margin:auto;
+    }
 }

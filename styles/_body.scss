@@ -10,7 +10,7 @@ html {
 body {
     font-size: $text-size;
     font-family: $title-font-family;
-    margin:2px;
+    margin:0;
 }
 .clearfix::after {
     content:"";
@@ -23,6 +23,7 @@ body {
 h2 {
     font-family: $title-font-family;
     font-size: $title-text-size;
+    margin-left: 5%;
 }
 a {
     all:unset;
@@ -33,5 +34,13 @@ a {
     &:hover {
         color: rgba(6, 10, 36, 0.56);
         cursor: pointer;
+    }
+}
+[class$="-button"] {
+    @include gradient-button-mobile;
+    &:hover {
+        background-image: linear-gradient(to left, $button-blue, $button-green);
+        color: $white;
+        transform: translatex(5px);
     }
 }
