@@ -1,3 +1,15 @@
+@mixin h1-title {
+    margin-left:$margin-left;
+    color:$black;
+    font-size:$title-text-size; 
+}
+@mixin h2-title {
+    font-family: $title-font-family;
+    font-size: $title-text-size;
+    margin-left: $margin-left;
+    color:$white;
+    line-height: $h2-lineheight;
+}
 @mixin gradient-button-mobile {
     background-color: $lightgreen;
     font-family: $text-font-family;
@@ -6,9 +18,16 @@
     font-weight: $bold-weight;
     font-weight: bolder;
     border-style:none;
-    width:90%; max-width: 288px;
-    height:48px;
     text-transform:uppercase;
     text-align:center;
     transition: 0.4s ease-in;
+}
+@mixin podcast {
+    display:block;
+    justify-content:center;
+    width:93.1%;
+    height: 4.1%;
+    max-width:584px;
+    margin:11px auto;
+    overflow-x:0;
 }

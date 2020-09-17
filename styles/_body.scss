@@ -20,10 +20,11 @@ body {
     clear:both;
     height:0px;
 }
+h1 {
+    @include h1-title;
+}
 h2 {
-    font-family: $title-font-family;
-    font-size: $title-text-size;
-    margin-left: 5%;
+    @include h2-title;
 }
 a {
     all:unset;
@@ -38,9 +39,11 @@ a {
 }
 [class$="-button"] {
     @include gradient-button-mobile;
-    &:hover {
-        background-image: linear-gradient(to left, $button-blue, $button-green);
-        color: $white;
-        transform: translatex(5px);
+    width:90%; 
+    max-width: 288px;
+    height:48px;
+    margin: 0 5%;
     }
+img {
+    max-width:100%;
 }

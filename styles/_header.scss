@@ -4,29 +4,29 @@ header {
     height:44px;
     margin-bottom: 0.5%;
     margin:0px;
-        & .topLogo {
+        .topLogo {
             float:left;
             margin: 10px 0px 10px 16px;
         }
-        & .topMenu {
+        .topMenu {
             float:right;
             margin: 5.6 0.2 0.3 0;
         }
-        & .hamMenu {
-            & .ulContainer {
-                color:red;
+        .hamMenu {
+            .ulContainer {
                 height:0px;
                 overflow:hidden;
+                list-style:none;
             }
-            & label {
-                & span {
+            label {
+                span {
                 display:inline-block;
                 width:18px;
                 height:2px;
                 background-color:black;
                 }
             }
-            & #menu {
+            #menu {
                 display:none;
                 &:checked ~ .ulContainer{
                     height:100px;
