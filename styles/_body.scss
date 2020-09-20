@@ -26,17 +26,6 @@ h1 {
 h2 {
     @include h2-title;
 }
-a {
-    all:unset;
-
-    &:visited {
-        color:green;
-    }
-    &:hover {
-        color: rgba(6, 10, 36, 0.56);
-        cursor: pointer;
-    }
-}
 [class$="-button"] {
     @include gradient-button-mobile;
     width:90%; 

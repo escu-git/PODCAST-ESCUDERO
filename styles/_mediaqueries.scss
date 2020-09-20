@@ -38,6 +38,18 @@
                 }
                 &:active {
                     color: rgba(6, 10, 35, 0.56);
+
+                    a {
+                        all:unset;
+                    
+                        &:visited {
+                            color:green;
+                        }
+                        &:hover {
+                            color: rgba(6, 10, 36, 0.56);
+                            cursor: pointer;
+                        }
+                    }
                 }
             }
         }
