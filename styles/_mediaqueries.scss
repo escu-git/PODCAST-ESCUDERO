@@ -59,11 +59,11 @@
     }
     .episodesContainer {
         display:block;
-        height:700px;
+        height:1024px;
         padding-top:5%;
         &:before {
-            border-right: 120vw solid #0000EC;
-            border-top: 120px solid white;
+            border-right: 100vw solid #0000EC;
+            border-top: 80px solid white;
         }
         h2 {
             margin-left:$desktopMargin;
@@ -77,9 +77,11 @@
                 width:40.6%;
                 max-width:584px;
                 height:5.9%;
-                max-height:288px;
+                min-height:288px;
                 iframe {
                     height:100%;
+                    min-height:232px;
+                    background-color:transparent;
                 }
             }
         }

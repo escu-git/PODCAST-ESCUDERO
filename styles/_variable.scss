@@ -4,9 +4,9 @@ $title-font-family:'IBM Plex Sans', sans-serif;
 
 //Colors
     //MOBILE
-    $dotMobile: #060A24;
+$dotMobile: #060A24;
     //DESKTOP
-    $dotDesktop: #0000EC;
+$dotDesktop: #0000EC;
 $dark-blue: #0000EC;
 $soft-blue: #0000FF;
 $button-blue: #0000FE;
@@ -28,6 +28,7 @@ $title-text-size: 2.25rem; // 36px
 $mob-text-size: 1px;
 $mob-button-size: 1px;
 $mot-title-size:1px;
+
 //Font weight
 $bold-weight: 500;
 $normal-weight: 200;
@@ -36,11 +37,6 @@ $normal-weight: 200;
 $web-width: 1440px;
 $button-width: 226px;
 $button-height: 56px;
-
-//mediaqueries width:
-$largeMobile: 426px;
-$tablet: 769px; 
-$notebook:1023px;
 
 //margin and padding
 $margin-left: 16px;

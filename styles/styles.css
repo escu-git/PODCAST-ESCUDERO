@@ -261,7 +261,6 @@ header .hamMenu #menu:checked ~ label span:nth-child(3) {
       -ms-flex-pack: center;
           justify-content: center;
   width: 93.1%;
-  height: 4.1%;
   max-width: 584px;
   margin: 11px auto;
   overflow-x: 0;
@@ -485,12 +484,12 @@ footer a:visited {
   }
   .episodesContainer {
     display: block;
-    height: 700px;
+    height: 1024px;
     padding-top: 5%;
   }
   .episodesContainer:before {
-    border-right: 120vw solid #0000EC;
-    border-top: 120px solid white;
+    border-right: 100vw solid #0000EC;
+    border-top: 80px solid white;
   }
   .episodesContainer h2 {
     margin-left: 200px;
@@ -512,10 +511,12 @@ footer a:visited {
     width: 40.6%;
     max-width: 584px;
     height: 5.9%;
-    max-height: 288px;
+    min-height: 288px;
   }
   .episodesContainer .flexContainer .podcast iframe {
     height: 100%;
+    min-height: 232px;
+    background-color: transparent;
   }
   .womenCodingContainer {
     display: -webkit-box;
