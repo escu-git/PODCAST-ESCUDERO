@@ -24,12 +24,9 @@
     transition: 0.4s ease-in;
 }
 @mixin podcast {
-    display:block;
     justify-content:center;
+    margin: 0 auto;
     width:93.1%;
-    max-width:584px;
-    margin:11px auto;
-    overflow-x:0;
 }
 //DESKTOP MIXIN
 @mixin li-a {

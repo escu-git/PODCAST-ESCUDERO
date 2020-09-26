@@ -208,7 +208,7 @@ header .hamMenu #menu:checked ~ label span:nth-child(3) {
 .episodesContainer {
   position: relative;
   width: 100%;
-  height: 1000px;
+  height: 1300px;
   background-image: linear-gradient(225deg, #0000FF 0%, #0000A3 100%);
 }
 
@@ -233,11 +233,12 @@ header .hamMenu #menu:checked ~ label span:nth-child(3) {
 .episodesContainer h2 {
   display: block;
   position: relative;
-  top: 10%;
+  top: 7%;
 }
 
 .episodesContainer .flexContainer {
   position: relative;
+  height: 70%;
   top: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -249,26 +250,27 @@ header .hamMenu #menu:checked ~ label span:nth-child(3) {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   margin: auto 0;
-  padding: 0 5.5px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  padding: 0;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .episodesContainer .flexContainer .podcast {
-  display: block;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 0 auto;
   width: 93.1%;
-  max-width: 584px;
+  height: calc(100% / 4);
+  text-align: center;
   margin: 11px auto;
-  overflow-x: 0;
 }
 
 .episodesContainer .flexContainer iframe {
-  width: 100%;
   border: 0px;
+  width: 301;
+  height: 232px;
+  margin: 0 auto;
 }
 
 .womenCodingContainer {
@@ -400,7 +402,7 @@ footer {
   height: 121px;
 }
 
-footer h6 {
+footer .copyright {
   -ms-grid-column: 1;
   -ms-grid-column-span: 5;
   grid-column: 1 / 6;
@@ -410,6 +412,22 @@ footer h6 {
   margin: auto;
   font-size: 14px;
   line-height: 22px;
+}
+
+footer .socialMedia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-column: 1/6;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
 }
 
 footer i {
@@ -512,10 +530,12 @@ footer a:visited {
     max-width: 584px;
     height: 5.9%;
     min-height: 288px;
+    margin: 0;
   }
   .episodesContainer .flexContainer .podcast iframe {
-    height: 100%;
-    min-height: 232px;
+    width: 100%;
+    max-width: 584px;
+    max-height: 232px;
     background-color: transparent;
   }
   .womenCodingContainer {
@@ -612,7 +632,10 @@ footer a:visited {
     height: 95px;
   }
   footer .copyright {
-    text-align: left;
+    -webkit-box-align: left;
+        -ms-flex-align: left;
+            align-items: left;
+    margin: 0 0 0 100px;
   }
   footer .socialMedia {
     width: 232px;
@@ -622,6 +645,7 @@ footer a:visited {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    margin-right: 100px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
